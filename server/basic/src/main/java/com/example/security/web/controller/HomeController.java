@@ -14,10 +14,10 @@ public class HomeController {
         return "홈페이지";
     }
 
-    /*@RequestMapping("/auth")
+    @RequestMapping("/auth")
     public Authentication auth() {
         return SecurityContextHolder.getContext().getAuthentication();
-    }*/
+    }
 
     @PreAuthorize("hasAnyAuthority('ROLE_USER')")
     @RequestMapping("/user")
